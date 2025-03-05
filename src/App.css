@@ -1,0 +1,77 @@
+:root{
+  --body-bg: #7A1CAC;
+  --body-color: #fff;
+  --secondary-25: rgba(255, 255, 255, .25);
+  --secondary-50: rgba(255, 255, 255, .5);
+  --secondary-75: rgba(255, 255, 255, .75);
+  --primary-bg: linear-gradient(45deg, rgb(226, 211, 45), rgb(255, 2, 150));
+  --primary-shadow: rgba(46, 7, 63, .75);
+  --primary-rgb: rgb(46, 7, 63);
+  --primary-btn: #AD49E1;
+  --primary: #EBD3F8;
+}
+input, textarea{
+  outline: none;
+}
+.background{
+  background-color: var(--body-bg);
+  border-radius: 2.5rem;
+  max-width: 700px;
+  padding-top: .5rem;
+  padding-bottom: 2.5rem;
+  color: var(--body-color);
+  box-shadow: 0 0 10px var(--primary-shadow);
+}
+.todo_list{
+  background-color: var(--secondary-75);
+}
+.content{
+  border-left: 5px solid rgb(247, 132, 0);
+  padding-left: .5rem;
+}
+.btn{
+  border-radius: 3rem;
+  background-color: var(--secondary-25);
+  color: var(--secondary-50);
+  padding: .5rem 1rem;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--primary-shadow);
+}
+.btn-active{
+  background: var(--primary-bg);
+  color: var(--body-color);
+}
+.btn-submit{
+  background-color: var(--primary-btn);
+  color: var(--primary-rgb);
+  font-weight: bold;
+}
+.btn-submit:hover{
+  background-color: var(--primary-rgb);
+  color: var(--body-color);
+}
+label{
+  line-height: 43px;
+}
+.orange{
+  color: orange;
+  border-color: orange;
+}
+.lime{
+  columns: lime;
+  border-color: lime;
+}
+.crimson{
+  columns: crimson;
+  border-color: crimson;
+}
+.dodgerblue{
+  columns: dodgerblue;
+  border-color: dodgerblue;
+}
+.purple{
+  columns: purple;
+  border-color: purple;
+}
