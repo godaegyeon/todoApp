@@ -55,23 +55,34 @@ input, textarea{
 label{
   line-height: 43px;
 }
-.orange{
+.meeting{
   color: orange;
   border-color: orange;
 }
-.lime{
+.design{
   columns: lime;
   border-color: lime;
 }
-.crimson{
+.travel{
   columns: crimson;
   border-color: crimson;
 }
-.dodgerblue{
+.freeTime{
   columns: dodgerblue;
   border-color: dodgerblue;
 }
-.purple{
+.etc{
   columns: purple;
   border-color: purple;
+}
+.category{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #333;
+}
+.btn-menu, .btn_modify, .btn_delete{
+  box-shadow: none;
+  background-color: transparent;
+  color: #333;
 }

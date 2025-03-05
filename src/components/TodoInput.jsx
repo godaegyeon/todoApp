@@ -35,7 +35,7 @@ function TodoInput({
               travel
             </button>
             <button onClick={onClick} className="btn">
-              free time
+              freeTime
             </button>
             <button onClick={onClick} className="btn btn-active">
               etc

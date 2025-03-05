@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TodoHeader from "./components/TodoHeader";
 import TodoInput from "./components/TodoInput";
 import TodoLists from "./components/TodoLists";
+import classNames from 'classnames';
 import "./App.css";
 
 function App() {
@@ -15,16 +16,16 @@ function App() {
     start: new Date().toISOString().split("T")[0],
     end: new Date().toISOString().split("T")[0],
     members: 0,
-    guest: "",
+    guest: ""
   });
 
   function onChangeData(e) {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
-    }));
-  }
+      [name]: value
+    }))
+  };
 
   function onSubmit(e) {
     e.preventDefault();
@@ -39,8 +40,8 @@ function App() {
         start: formData.start,
         end: formData.end,
         members: formData.members,
-        guest: formData.guest,
-      },
+        guest: formData.guest
+      }
     ]);
     setId((prevId) => prevId + 1);
     setFormData({
@@ -51,22 +52,22 @@ function App() {
       start: new Date().toISOString().split("T")[0],
       end: new Date().toISOString().split("T")[0],
       members: 0,
-      guest: "",
-    });
-  }
+      guest: ""
+    })
+  };
 
   function onClick(e) {
     e.preventDefault();
     e.target.classList.add("btn-active");
     setFormData((prevData) => ({
       ...prevData,
-      ["category"]: e.target.innerText,
-    }));
-  }
+      ["category"]: e.target.innerText
+    }))
+  };
 
   function btnRemove() {
-
-  }
+    
+  };
 
   return (
     <>
@@ -81,7 +82,7 @@ function App() {
         <TodoLists todos={todos} />
       </div>
     </>
-  );
-}
+  )
+};
 
 export default App;
