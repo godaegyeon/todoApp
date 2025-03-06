@@ -60,29 +60,35 @@ label{
   border-color: orange;
 }
 .design{
-  columns: lime;
+  color: lime;
   border-color: lime;
 }
 .travel{
-  columns: crimson;
+  color: crimson;
   border-color: crimson;
 }
 .freeTime{
-  columns: dodgerblue;
+  color: dodgerblue;
   border-color: dodgerblue;
 }
 .etc{
-  columns: purple;
+  color: purple;
   border-color: purple;
 }
 .category{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: #333;
 }
-.btn-menu, .btn_modify, .btn_delete{
+.btn-menu, .btn-modify, .btn-delete{
   box-shadow: none;
   background-color: transparent;
   color: #333;
+  transition: all .3s ease-in-out;
+}
+.todo_title{
+  color: #333;
+}
+.btn-toggle{
+  transform: rotate(90deg);
 }

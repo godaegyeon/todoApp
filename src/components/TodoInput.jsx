@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 
 function TodoInput({
@@ -25,19 +26,37 @@ function TodoInput({
         <fieldset className="d-flex column border-none gap-2">
           <legend className="d-none">Todo App</legend>
           <div className="d-flex justify-content-between mt-5">
-            <button onClick={onClick} className="btn">
+            <button
+              onClick={onClick}
+              className={classNames("btn", {
+                "btn-active": formData.category === "meeting",
+              })}
+              data-color="orange"
+            >
               meeting
             </button>
-            <button onClick={onClick} className="btn">
+            <button onClick={onClick} className={classNames("btn", {
+                "btn-active": formData.category === "design",
+              })}
+              data-color="lime">
               design
             </button>
-            <button onClick={onClick} className="btn">
+            <button onClick={onClick} className={classNames("btn", {
+                "btn-active": formData.category === "travel",
+              })}
+              data-color="crimson">
               travel
             </button>
-            <button onClick={onClick} className="btn">
+            <button onClick={onClick} className={classNames("btn", {
+                "btn-active": formData.category === "freeTime",
+              })}
+              data-color="dodgerblue">
               freeTime
             </button>
-            <button onClick={onClick} className="btn btn-active">
+            <button onClick={onClick} className={classNames("btn", {
+                "btn-active": formData.category === "etc",
+              })}
+              data-color="purple">
               etc
             </button>
           </div>
@@ -101,7 +120,10 @@ function TodoInput({
             className="fw-bol fs-2 p-1 round-1 border-none bg mt-2"
             onChange={onChangeData}
           />
-          <button type="submit" className="btn btn-submit fs-2 p-1 round-1 border-none bg mt-5">
+          <button
+            type="submit"
+            className="btn btn-submit fs-2 p-1 round-1 border-none bg mt-5"
+          >
             일정등록
           </button>
         </fieldset>

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 
-function TodoLists({ todos }) {
+function TodoLists({ todos, btnToggle, onDelete }) {
   return (
     <>
       <ul className="todo_list container mx-auto mt-5  round-1">
@@ -9,24 +9,24 @@ function TodoLists({ todos }) {
           <li key={todo.id} className="p-1 mt-2">
             <div className="main">
               <div className="d-flex justify-content-between ">
-                <h2>{todo.category}</h2>
+                <h2 className={classNames("category", todo.category)}>
+                  {todo.category}
+                </h2>
                 <div className="d-flex justify-content-end">
-                  <button className="btn btn-menu" onClick={}>
-                    <i className="bi bi-three-dots"></i>
-                  </button>
-                </div>
-                <div className="btn-box d-none">
                   <button className="btn btn-modify">
                     <i className="bi bi-pencil-fill"></i>
                   </button>
-                  <button className="btn btn-delete">
+                  <button className="btn btn-delete" onClick={onDelete}>
                     <i className="bi bi-trash3"></i>
+                  </button>
+                  <button className="btn btn-menu " onClick={btnToggle}>
+                    <i className="bi bi-three-dots"></i>
                   </button>
                 </div>
               </div>
               <hr />
-              <div className="content">
-                <h3 className="">{todo.title}</h3>
+              <div className={classNames("content", todo.category)}>
+                <h3 className="todo_title">{todo.title}</h3>
                 <p className="color-333 mt-1">{todo.desc}</p>
               </div>
             </div>
